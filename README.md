@@ -2,6 +2,13 @@
 
 This Power BI dashboard provides comprehensive financial analytics for business performance tracking. It focuses on revenue, profit, and profitability margins across different dimensions including time periods, countries, products, and customer segments.
 
+<img src="https://github.com/muhammadsalahdine1/Revenue-Profitability-Analysis-PowerBI/blob/main/1.PNG" width="1000">
+<img src="https://github.com/muhammadsalahdine1/Revenue-Profitability-Analysis-PowerBI/blob/main/2.PNG" width="1000">
+<img src="https://github.com/muhammadsalahdine1/Revenue-Profitability-Analysis-PowerBI/blob/main/3.PNG" width="1000">
+<img src="https://github.com/muhammadsalahdine1/Revenue-Profitability-Analysis-PowerBI/blob/main/4.PNG" width="1000">
+<img src="https://github.com/muhammadsalahdine1/Revenue-Profitability-Analysis-PowerBI/blob/main/5.PNG" width="1000">
+
+
 ## 📊 Dashboard Overview
 
 ### Key Metrics
