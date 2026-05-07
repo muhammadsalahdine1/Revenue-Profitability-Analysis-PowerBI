@@ -1,0 +1,35 @@
+Dim Date = 
+VAR _MinDate =
+    MINX(ALL(financials), financials[Date])
+VAR _MaxDate =
+    MAXX(ALL(financials),financials[Date])
+RETURN
+ADDCOLUMNS(
+    CALENDAR(_MinDate,_MaxDate),
+
+    "DateKey", YEAR([Date])*10000 + MONTH([Date]) * 100 + DAY([Date]),
+    "Year", YEAR([Date]),
+    "Month Number", MONTH([Date]),
+    "Month Name" ,FORMAT([Date],"MMMM"),
+    "Month Short" , FORMAT([Date],"MMM"),
+    "Year Month" , FORMAT([Date],"YYYY_MM"),
+    "Year Month Sort" ,YEAR([Date]) *100 +MONTH([Date]),
+    "Quarter Number" ,QUARTER([Date]),
+    "Quarter" ,"Q" & QUARTER([Date]),
+    "Year Quarter" , FORMAT([Date],"YYYY") & "-Q" & QUARTER([Date]),
+    "Week Number" , WEEKNUM([Date], 2),
+    "Day" , DAY([Date]),
+    "Day Name" , FORMAT([Date] ,"DDDD"),
+    "Day Short" ,FORMAT([Date],"DDD"),
+    "Day Of Week Number" ,WEEKDAY([Date],2),
+    "Start Of Month" ,DATE(YEAR([Date]),MONTH([Date]),1),
+    "End Of Monthg" ,EOMONTH([Date],0),
+    "Start Of Quarter" ,DATE(YEAR([Date]), (QUARTER([Date]) -1)*3 +1, 1),
+    "End Of Quarter" ,EOMONTH(DATE(YEAR([Date]), QUARTER([Date])* 3 ,1) ,0),
+    "Start Of Year" ,DATE(YEAR([Date]),1,1),
+    "End Of Year" , DATE(YEAR([Date]),12,31),
+    "Month Year Label", FORMAT([Date],"MMM YYYY"),
+    "Is Weekend", IF(WEEKDAY([Date],2)>=6, 1,0),
+    "Is Weekday" , IF(WEEKDAY([Date],2)< 6,1,0)
+
+)
